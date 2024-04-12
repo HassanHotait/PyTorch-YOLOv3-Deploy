@@ -150,6 +150,7 @@ class YOLOLayer(nn.Module):
         self.register_buffer(
             'anchor_grid', anchors.clone().view(1, -1, 1, 1, 2))
         self.stride = None
+        
 
     def forward(self, x: torch.Tensor, img_size: int) -> torch.Tensor:
         """
